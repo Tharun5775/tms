@@ -3,7 +3,8 @@ package com.tms.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.util.Date;
+import java.time.LocalDateTime;
+
 
 
 @Data
@@ -16,7 +17,7 @@ public class Timesheet {
     @OneToOne
     @JoinColumn(name="entryId")
     private  TimesheetEntry timesheetEntry;
-    private Date weekStartDate;
+    private LocalDateTime weekStartDate;
 
     @ManyToOne
     @JoinColumn(name = "contractorId")

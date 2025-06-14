@@ -3,7 +3,7 @@ package com.tms.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 
 @Data
@@ -25,7 +25,7 @@ public class TimesheetEntry {
     @JoinColumn(name = "activityCode")
     private Activity activity;
 
-    private Date date;
+    private LocalDateTime date;
     private double hoursWorked;
     private String comments;
 
