@@ -12,7 +12,6 @@ import org.springframework.stereotype.Repository;
 public interface TimesheetRepository extends JpaRepository<Timesheet, Integer> {
     // Find timesheets by contractor's ID
     List<Timesheet> findByContractorContractorId(int contractorId);
-
     Optional<Timesheet> findByTimesheetId(int entryId);
 
     // Optional: Fetch all timesheets of a contractor

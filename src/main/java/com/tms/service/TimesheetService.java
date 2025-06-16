@@ -1,17 +1,16 @@
 package com.tms.service;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.List;
 
-import com.tms.dto.TimesheetReviewRequest;
-import com.tms.dto.TimesheetSummaryDTO;
 import org.springframework.stereotype.Service;
+
+import com.tms.dto.TimesheetHistoryResponse;
+import com.tms.dto.TimesheetReviewRequest;
 
 @Service
 public interface TimesheetService {
     String reviewTimesheet(TimesheetReviewRequest request);
-    List<TimesheetSummaryDTO> getTimesheetHistory(int contractorId, LocalDateTime startDate, LocalDateTime endDate);
+    TimesheetHistoryResponse getTimesheetHistory(int contractorId, LocalDateTime startDate, LocalDateTime endDate);
 
 
 }
